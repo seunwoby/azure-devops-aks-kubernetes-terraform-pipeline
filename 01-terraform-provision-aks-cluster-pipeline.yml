@@ -2,7 +2,10 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: devops-agentpool
+  demands:
+   - agent.name -equals devops-agent
+
 
 # Define Variables for Environments
 variables:
